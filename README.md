@@ -7,3 +7,5 @@ b1 is the end point of the second segment.
 stress_post_visulization.py is the python file for visulization of stress tensor in LAMMPS calculation (for only one file).
 
 stress_visulization_v2.py is the python file for visulization for stress tensor in LAMMPS calculation (for severial files).
+
+stress_sum_time.py is the python filr for stress tensor in LAMMPS (for summation of time series files).
