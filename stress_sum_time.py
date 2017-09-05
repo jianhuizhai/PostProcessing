@@ -20,7 +20,7 @@ for i in range(begin,totalstep+step,step):
     f=open(file)
     newfile=open(newfile,'a')
     newfile.write(title)
-    position=(i-begin)/step
+    position=int((i-begin)/step)
     list[position]=[]
     for line in f.readlines()[9:]:
         row=line.split()
