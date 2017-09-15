@@ -11,3 +11,5 @@ stress_visulization_v2.py is the python file for visulization for stress tensor 
 stress_sum_time.py is the python file for stress tensor in LAMMPS (for summation of time series files).
 
 data_process.py is a python file for read the dat file and plot it by using matplotlib module in python.
+
+data_print.py is a python file for generate the dat file.
