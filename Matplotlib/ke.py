@@ -17,8 +17,10 @@ if(len(sys.argv)>2):
 	mean=np.mean(ke[count:end])
 	print('mean temp=',mean)
 x=[i+1 for i in range(begin,end)]
-plt.plot(x,T[begin:end],'--',linewidth=2.0,color='b')
+
 plt.plot(x,ke[begin:end],'-',linewidth=2.0,color='r')
+plt.plot(x,T[begin:end],'--',linewidth=2.0,color='b')
+
 plt.xlim(0,end)
 plt.ylim(0,T[1]*1.5)
 plt.minorticks_on()
@@ -50,7 +52,9 @@ if(len(sys.argv)>4):
 	ax2.plot(x[begin1:end1],ke[begin1:end1], 'r')
 	ax2.plot(x[begin1:end1],T[begin1:end1],'--',linewidth=2.0,color='b')
 	plt.xlim([begin1,end1])
-	plt.ylim([260,340])
+	if(len(sys.argv)>5):
+		d=int(sys.argv[5])
+		plt.ylim([T[1]-d,T[1]+d])
 	plt.minorticks_on()
 	plt.tick_params(which='major',direction='in',width=1.5,length=5)  # 
 	plt.tick_params(which='minor',direction='in',width=1.5,length=3)
@@ -61,5 +65,5 @@ if(len(sys.argv)>4):
 	plt.xticks(fontsize=12)
 	plt.yticks(fontsize=12)
 	ax2.yaxis.set_major_locator(ymajorLocator)
-	ax2.xaxis.set_major_locator(xmajorLocator)   
+	ax2.xaxis.set_major_locator(xmajorLocator)
 plt.show()
