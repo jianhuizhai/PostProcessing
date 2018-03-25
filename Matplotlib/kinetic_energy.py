@@ -59,7 +59,7 @@ ax.set_xlabel('simulation time step',fontsize=12)
 ax.set_ylabel('T(K)',fontsize=12)
 
 # set parameters of legend
-ax.legend(loc=1,fontsize=12,frameon=True,edgecolor='black',linewidth=3.0)
+ax.legend(loc=1,fontsize=12,frameon=True,edgecolor='black')
 
 # save picture
 plt.savefig("examples.pdf") 
