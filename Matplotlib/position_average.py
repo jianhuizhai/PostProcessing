@@ -3,7 +3,7 @@ import sys
 import matplotlib.pylab as plt
 # d is the number of another node
 
-
+number = int(sys.argv[1])
 step1='00001000p'
 step2='00005000p'
 step3='00010000p'
@@ -13,7 +13,6 @@ step6='00060000p'
 
 col=0
 
-number=10
 
 file1=np.zeros((number,1000+1))
 file2=np.zeros((number,1000+1))
@@ -127,8 +126,8 @@ plt.plot(np.log(x[begin:end]),np.log(f5[begin:end]),label='step5')
 plt.plot(np.log(x[begin:end]),np.log(f6[begin:end]),label='step6')
 #plt.xlim([1,1000])
 #plt.ylim([10**(-4),10**(-2)])
-if(len(sys.argv)>1):
-	end1=int(sys.argv[1])
+if(len(sys.argv)>2):
+	end1=int(sys.argv[2])
 else:
 	end1=8
 print('np.log(end1)=',np.log(end1))
