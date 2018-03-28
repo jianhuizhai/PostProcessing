@@ -13,12 +13,14 @@ step6='00060000p'
 
 col=0
 
-file1=np.zeros((6,1000+1))
-file2=np.zeros((6,1000+1))
-file3=np.zeros((6,1000+1))
-file4=np.zeros((6,1000+1))
-file5=np.zeros((6,1000+1))
-file6=np.zeros((6,1000+1))
+number=10
+
+file1=np.zeros((number,1000+1))
+file2=np.zeros((number,1000+1))
+file3=np.zeros((number,1000+1))
+file4=np.zeros((number,1000+1))
+file5=np.zeros((number,1000+1))
+file6=np.zeros((number,1000+1))
 
 # ----------------------------------------------------------------------------------------
 
@@ -30,12 +32,12 @@ position4=np.zeros(1000+1)
 position5=np.zeros(1000+1)
 position6=np.zeros(1000+1)
 
-r1=np.zeros((6,1000+1))
-r2=np.zeros((6,1000+1))
-r3=np.zeros((6,1000+1))
-r4=np.zeros((6,1000+1))
-r5=np.zeros((6,1000+1))
-r6=np.zeros((6,1000+1))
+r1=np.zeros((number,1000+1))
+r2=np.zeros((number,1000+1))
+r3=np.zeros((number,1000+1))
+r4=np.zeros((number,1000+1))
+r5=np.zeros((number,1000+1))
+r6=np.zeros((number,1000+1))
 
 
 #position2=np.loadtxt(name2,usecols=[col])
@@ -44,7 +46,7 @@ r6=np.zeros((6,1000+1))
 #position5=np.loadtxt(name5,usecols=[col])
 #position6=np.loadtxt(name6,usecols=[col])
 # ------------------------------------------------------------------------------------
-for i in range(0,6):
+for i in range(0,number):
 	name1=step1+repr(i+1)+'.dat'
 	name2=step2+repr(i+1)+'.dat'
 	name3=step3+repr(i+1)+'.dat'
@@ -82,12 +84,29 @@ for i in range(0,6):
 		r4[i][d]=np.mean(np.abs(h4))
 		r5[i][d]=np.mean(np.abs(h5))
 		r6[i][d]=np.mean(np.abs(h6))
-f1=np.sum([r1[0],r1[1],r1[2],r1[3],r1[4],r1[5]],axis=0)/6
-f2=np.sum([r2[0],r2[1],r2[2],r2[3],r2[4],r2[5]],axis=0)/6
-f3=np.sum([r3[0],r3[1],r3[2],r3[3],r3[4],r3[5]],axis=0)/6
-f4=np.sum([r4[0],r4[1],r4[2],r4[3],r4[4],r4[5]],axis=0)/6
-f5=np.sum([r5[0],r5[1],r5[2],r5[3],r5[4],r5[5]],axis=0)/6
-f6=np.sum([r6[0],r6[1],r6[2],r6[3],r6[4],r6[5]],axis=0)/6
+
+f1=np.zeros(1000+1)
+f2=np.zeros(1000+1)
+f3=np.zeros(1000+1)
+f4=np.zeros(1000+1)
+f5=np.zeros(1000+1)
+f6=np.zeros(1000+1)
+for i in range(0,number):
+	f1=r1[i]+f1
+	f2=r2[i]+f2
+	f3=r3[i]+f3
+	f4=r4[i]+f4
+	f5=r5[i]+f5
+	f6=r6[i]+f6
+
+# -----------------------------------------------------------------
+f1=f1/number
+f2=f2/number
+f3=f3/number
+f4=f4/number
+f5=f5/number
+f6=f6/number
+
 #------------------------------------------------------------------------------------
 
 
