@@ -9,13 +9,6 @@ step2=int(sys.argv[2])
 step3=int(sys.argv[3])
 step4=int(sys.argv[4])
 
-print("the fifth parameter is d and is optional")
-
-if(len(sys.argv)>5):
-    d=int(sys.argv[5])
-else:
-    d=1
-
 col=0
 # ----------------------------------------------------------------------------------------
 name1=repr(step1)
