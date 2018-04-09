@@ -101,12 +101,27 @@ begin = 1
 end = 999
 x=[i for i in range(0,1001)]
 
-plt.plot(np.log(x[begin:end]),np.log(f1[begin:end]),label='step1')
-plt.plot(np.log(x[begin:end]),np.log(f2[begin:end]),label='step2')
-plt.plot(np.log(x[begin:end]),np.log(f3[begin:end]),label='step3')
-plt.plot(np.log(x[begin:end]),np.log(f4[begin:end]),label='step4')
-plt.plot(np.log(x[begin:end]),np.log(f5[begin:end]),label='step5')
-plt.plot(np.log(x[begin:end]),np.log(f6[begin:end]),label='step6')
+plt.plot(np.log(x[begin:end]),np.log(f1[begin:end]),label=repr(step1))
+plt.plot(np.log(x[begin:end]),np.log(f2[begin:end]),label=repr(step2))
+plt.plot(np.log(x[begin:end]),np.log(f3[begin:end]),label=repr(step3))
+plt.plot(np.log(x[begin:end]),np.log(f4[begin:end]),label=repr(step4))
+plt.plot(np.log(x[begin:end]),np.log(f5[begin:end]),label=repr(step5))
+plt.plot(np.log(x[begin:end]),np.log(f6[begin:end]),label=repr(step6))
+
+end1=5
+
+z1=np.polyfit(np.log(x[begin:end1]),np.log(f1[begin:end1]),1)
+z2=np.polyfit(np.log(x[begin:end1]),np.log(f2[begin:end1]),1)
+z3=np.polyfit(np.log(x[begin:end1]),np.log(f3[begin:end1]),1)
+z4=np.polyfit(np.log(x[begin:end1]),np.log(f4[begin:end1]),1)
+z5=np.polyfit(np.log(x[begin:end1]),np.log(f5[begin:end1]),1)
+z6=np.polyfit(np.log(x[begin:end1]),np.log(f6[begin:end1]),1)
+print('z1=',z1)
+print('z2=',z2)
+print('z3=',z3)
+print('z4=',z4)
+print('z5=',z5)
+print('z6=',z6)
 
 plt.legend()
 plt.show()
