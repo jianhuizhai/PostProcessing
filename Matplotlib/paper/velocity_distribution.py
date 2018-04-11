@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 import sys
 
-xmajorLocator   = MultipleLocator(100)
+xmajorLocator   = MultipleLocator(50)
 
 
 
@@ -61,7 +61,7 @@ ax.spines['bottom'].set_linewidth(3.0)
 # ax.legend(loc=1,fontsize=20,frameon=True,edgecolor='black')
 
 # bins : 11,20,40,0
-plt.hist(velocity, 40, normed=True)
+plt.hist(velocity, 50, normed=True)
 
 plt.xlabel('v(m/s)',fontsize='35')
 plt.ylabel('Probability',fontsize='35')
@@ -73,13 +73,13 @@ plt.tick_params(which='major',direction='in',width=3.0,length=12)  #
 plt.tick_params(which='minor',direction='in',width=3.0,length=5)
 plt.xticks(fontsize=30)
 plt.yticks(fontsize=30)
-plt.xlim(-400,400)
-plt.ylim(0,0.005)
+plt.xlim(-250,250)
+plt.ylim(0,0.01)
 
 lg=plt.legend(loc=1,bbox_to_anchor=(0.98,0.98),fontsize=30,frameon=True,edgecolor='black')
 lg.get_frame().set_linewidth(5)
 # lg.get_frame().set_edgecolor("red")  # set the color of frame to red
 ax.xaxis.set_major_locator(xmajorLocator)
 
-plt.savefig("velocity900.pdf")
+plt.savefig("velocity300.pdf")
 plt.show()
