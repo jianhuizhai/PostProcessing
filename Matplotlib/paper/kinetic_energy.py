@@ -81,5 +81,5 @@ if(len(sys.argv)>4):
 	plt.yticks(fontsize=25)
 	ax2.yaxis.set_major_locator(ymajorLocator)
 	ax2.xaxis.set_major_locator(xmajorLocator)
-	plt.savefig('ke1200.pdf',dpi=200)
+	plt.savefig('ke1200.pdf',,bbox_inches="tight")
 plt.show()
