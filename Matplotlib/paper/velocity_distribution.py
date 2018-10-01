@@ -81,5 +81,5 @@ lg.get_frame().set_linewidth(5)
 # lg.get_frame().set_edgecolor("red")  # set the color of frame to red
 ax.xaxis.set_major_locator(xmajorLocator)
 
-plt.savefig("velocity300.pdf")
+plt.savefig("velocity300.pdf",bbox_inches="tight")
 plt.show()
