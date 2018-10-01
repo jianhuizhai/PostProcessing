@@ -156,5 +156,5 @@ print('z6=',z6)
 
 lg=plt.legend(loc=2,bbox_to_anchor=(0.015,0.98),fontsize=28,frameon=True,edgecolor='black')
 lg.get_frame().set_linewidth(4)
-plt.savefig('position600K.pdf')
+plt.savefig('position600K.pdf',bbox_inches="tight")
 plt.show()
