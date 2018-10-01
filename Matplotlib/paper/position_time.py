@@ -75,5 +75,5 @@ lg=plt.legend(loc=2,bbox_to_anchor=(0.015,0.98),fontsize=28,frameon=True,edgecol
 lg.get_frame().set_linewidth(4)
 
 ax.xaxis.set_major_locator(xmajorLocator)
-plt.savefig('position_time600K.pdf')
+plt.savefig('position_time600K.pdf',bbox_inches="tight")
 plt.show()
