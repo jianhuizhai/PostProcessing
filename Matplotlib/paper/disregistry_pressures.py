@@ -31,12 +31,16 @@ ax.spines['right'].set_linewidth(3.0)
 ax.spines['top'].set_linewidth(3.0)
 ax.spines['bottom'].set_linewidth(3.0)
 
+
 #===================================================================================
 plt.minorticks_on()
 plt.tick_params(which='major',direction='in',width=3.0,length=12)  # 
 plt.tick_params(which='minor',direction='in',width=3.0,length=5)
 plt.xticks(fontsize=30)
 plt.yticks(fontsize=30)
+
+ax.tick_params(axis='x', pad=10)  # distance between axis and text
+ax.tick_params(axis='y', pad=10)
 
 #-----------------------------------------------------------------------------------
 plt.xlim()
@@ -48,5 +52,5 @@ plt.ylabel('Disregistry '+ r'$\phi (\AA)$', fontsize='35')
 lg=plt.legend(fontsize=28,frameon=True,edgecolor='black')
 lg.get_frame().set_linewidth(4)
 #==================================================================================
-plt.savefig('disregistry.pdf')
+plt.savefig('disregistry.pdf', bbox_inches="tight")
 plt.show()
