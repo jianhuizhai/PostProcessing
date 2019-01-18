@@ -7,6 +7,7 @@ velocity_distribution.py is used to plot velocity distribution.
 
 position_average2.py and position_time.py are used to plot height difference as a function of difference.
 
-#Molecular Dynamics (MD)
+Molecular Dynamics (MD)
+=======================
 
 disregistry_pressures.py is used to compare disregistries under diferent pressures.
