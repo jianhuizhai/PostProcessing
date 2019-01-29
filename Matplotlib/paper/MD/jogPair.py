@@ -43,6 +43,8 @@ plt.yticks(fontsize=30)
 plt.scatter(dipole[:,1], dipole[:,0], s=200)  # x axis is z coordinate, y axis is y coordinate
 plt.scatter(jog[:,1], jog[:,0], s=200)
 
+plt.xlim(0,84.36)
+
 plt.xlabel(r'$z\ \mathrm{(\AA)}$', fontsize='35')
 plt.ylabel(r'$y\ \mathrm{(\AA)}$', fontsize='35')
 
