@@ -1,7 +1,7 @@
 Discrete Dislocation Dynamics (DDD)
 ====================================
 
-1. kinetic_energy.py is used to plot kinetic energy as a fuction of time and with a insered small amplification graph (DDD).
+1. kinetic_energy.py is used to plot kinetic energy as a fuction of time and with a inserted small amplification graph (DDD).
 
 2. velocity_distribution.py is used to plot velocity distribution.
 
