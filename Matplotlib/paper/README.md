@@ -10,5 +10,5 @@ Discrete Dislocation Dynamics (DDD)
 Molecular Dynamics (MD)
 =======================
 
-1. disregistry_pressures.py is used to compare disregistries under diferent pressures.
+1. disregistry_pressures.py is used to compare disregistries under different pressures.
 2. jogPair.py is used to plot dislocation jog configuration (position is determined from disregistry). (In MD folder)
