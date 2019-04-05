@@ -5,16 +5,25 @@ import matplotlib.pylab as plt
 
 filename = sys.argv[1]
 x, y, density = np.loadtxt(filename, skiprows=4, unpack=True)
+#====================================================================================
+alat = float(input("Lattice parameter : "))
+bmag = alat/np.sqrt(2)
+
 
 plt.figure(figsize=(18.5,16.5))
 ax = plt.subplot(1,1,1)
+cbarlevels =[-0.02, -0.01, 0 ,0.01, 0.02]
 
 #plt.scatter(x,y,c=density, vmin=-0.03, vmax=0.03, cmap='coolwarm') # hot, cool, coolwarm, gnuplot, gnuplot2, bwr, Reds
-scatters = plt.scatter(x,y,c=density, cmap='coolwarm') # hot, cool, coolwarm, gnuplot, gnuplot2, bwr, Reds
+scatters = plt.scatter(x/bmag,y/alat,c=density,cmap='coolwarm') # hot, cool, coolwarm, gnuplot, gnuplot2, bwr, Reds
 cb = plt.colorbar(scatters, pad=0.01)  # pad controls the distance between bar and picture
-plt.clim(-0.03, 0.03)   # lim of colorbar
+
+plt.clim(-0.02, 0.02)   # lim of colorbar
 cb.set_label(label="Charge density (e/S)",size=45)
 cb.ax.tick_params(labelsize=35,direction='in')
+cb.set_ticks(cbarlevels)
+cb.set_ticklabels(cbarlevels)
+
 #--------------------------------------------------------------------
 ax.tick_params(axis='x', pad=15)  # distance between axis and text
 ax.tick_params(axis='y', pad=15)
@@ -36,8 +45,10 @@ ax.tick_params(axis='x', pad=10)  # distance between axis and text
 ax.tick_params(axis='y', pad=10)
 
 #-----------------------------------------------------------------------------------
-plt.xlabel('[110]'+r'($\mathrm{\AA}$)', fontsize='45')
-plt.ylabel(r'$[1\bar{1}0](\mathrm{\AA})$', fontsize='45')
+#plt.xlabel('[110]'+r'($\mathrm{\AA}$)', fontsize='45')
+#plt.ylabel(r'$[1\bar{1}0](\mathrm{\AA})$', fontsize='45')
+plt.xlabel(r'$[1\bar{1}0]/b$', fontsize='45')
+plt.ylabel(r'$[001]/a$', fontsize='45')
 
 plt.xlim(0,)
 plt.ylim(0,)
