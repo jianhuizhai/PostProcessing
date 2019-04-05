@@ -12,17 +12,18 @@ bmag = alat/np.sqrt(2)
 
 plt.figure(figsize=(18.5,16.5))
 ax = plt.subplot(1,1,1)
-cbarlevels =[-0.02, -0.01, 0 ,0.01, 0.02]
 
 #plt.scatter(x,y,c=density, vmin=-0.03, vmax=0.03, cmap='coolwarm') # hot, cool, coolwarm, gnuplot, gnuplot2, bwr, Reds
 scatters = plt.scatter(x/bmag,y/alat,c=density,cmap='coolwarm') # hot, cool, coolwarm, gnuplot, gnuplot2, bwr, Reds
 cb = plt.colorbar(scatters, pad=0.01)  # pad controls the distance between bar and picture
 
-plt.clim(-0.02, 0.02)   # lim of colorbar
+
 cb.set_label(label="Charge density (e/S)",size=45)
 cb.ax.tick_params(labelsize=35,direction='in')
-cb.set_ticks(cbarlevels)
+cb.set_ticks(np.linspace(-0.02,0.02,7,endpoint=True))
+cbarlevels = ('-0.02', '-0.01', '-0.05', '0', '0.05', '0.01', '0.02')
 cb.set_ticklabels(cbarlevels)
+plt.clim(-0.02, 0.02)   # lim of colorbar
 
 #--------------------------------------------------------------------
 ax.tick_params(axis='x', pad=15)  # distance between axis and text
