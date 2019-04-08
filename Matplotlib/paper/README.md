@@ -12,3 +12,7 @@ Molecular Dynamics (MD)
 
 1. disregistry_pressures.py is used to compare disregistries under different pressures.
 2. jogPair.py is used to plot dislocation jog configuration (position is determined from disregistry). (In MD folder)
+
+Charge
+======================
+1. charge_density.py is used to plot charge density (2D).
