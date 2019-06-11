@@ -61,7 +61,9 @@ ax.spines['bottom'].set_linewidth(3.0)
 # ax.legend(loc=1,fontsize=20,frameon=True,edgecolor='black')
 
 # bins : 11,20,40,0
-plt.hist(velocity, 50, normed=True)
+# normed was deprecated in Matplotlib 2.1 and will be removed in 3.1.
+#plt.hist(velocity, 50, normed=True)
+plt.hist(velocity, 50, density=True)
 
 plt.xlabel('v(m/s)',fontsize='35')
 plt.ylabel('Probability',fontsize='35')
