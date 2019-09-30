@@ -59,8 +59,8 @@ ax.spines['bottom'].set_linewidth(3.0)
 plt.minorticks_on()
 plt.tick_params(which='major',direction='in',width=3.0,length=12)  # 
 plt.tick_params(which='minor',direction='in',width=3.0,length=5)
-plt.xticks(fontsize=30)
-plt.yticks(fontsize=30)
+plt.xticks(fontsize=36)
+plt.yticks(fontsize=36)
 
 
 #plt.plot(x, yvals, 'r',linewidth=5.0,label='fit')       # fitting data
@@ -71,8 +71,8 @@ plt.scatter( size, energy, s=500, color='',edgecolors='black', linewidths=6 )
 plt.scatter( size, energy-elastic_int, s=500, marker='s',color='',edgecolors='black',linewidths=6)
 
 
-plt.xlabel(r'$[001]/a$', fontsize='35')
-plt.ylabel(r'$H_{jp}\ (\mathrm{eV})$', fontsize='35')
+plt.xlabel(r'$[001]/a$', fontsize='40')
+plt.ylabel(r'$H_{jp}\ (\mathrm{eV})$', fontsize='40')
 
 plt.xlim(15, 45)
 #plt.ylim(2.4, 2.8)  ## unit jog
