@@ -3,3 +3,5 @@
 * __unitjog_charge_density.py__ is used to plot charge density of unit jog system.
 * __superjogI_charge_density.py__ is used to plot charge density of super jog I system.
 * __superjogII_charge_density.py__ is used to plot charge density of super jog II system.
+
+you should give the dislocation position in file that beginned with __DislocInfo___.
